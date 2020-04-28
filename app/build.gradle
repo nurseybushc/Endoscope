@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "pl.hypeapp.endoscope"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 5
         versionName "1.4"
         multiDexEnabled true
@@ -30,21 +30,24 @@ def rxAndroidVersion = '1.2.1'
 
 dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':libstreaming')
-    compile "com.android.support:appcompat-v7:$androidSupportAppcompatVersion"
-    compile "com.android.support:support-v4:$androidSupportVersion"
-    compile "com.dlazaro66.qrcodereaderview:qrcodereaderview:$qrCodeReaderViewVersion"
-    compile('com.github.kenglxn.QRGen:android:2.2.0') {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':libstreaming')
+    implementation "com.android.support:appcompat-v7:28.0.0"
+    implementation "com.android.support:support-v4:28.0.0"
+    implementation "com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.3"
+    implementation('com.github.kenglxn.QRGen:android:2.2.0') {
         exclude group: 'com.google.zxing'
     }
-    compile "com.jakewharton:butterknife:$butterKnifeVersion"
-    compile "com.tbruyelle.rxpermissions:rxpermissions:$rxPermissionVersion"
-    compile "io.reactivex:rxandroid:$rxAndroidVersion"
-    compile "io.reactivex:rxjava:$rxJavaVersion"
-    compile "net.grandcentrix.thirtyinch:thirtyinch:$thirtyinchVersion"
-    compile "net.grandcentrix.thirtyinch:thirtyinch-rx:$thirtyinchVersion"
-    testCompile 'junit:junit:4.12'
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    implementation "com.tbruyelle.rxpermissions:rxpermissions:$rxPermissionVersion"
+    implementation "io.reactivex:rxandroid:$rxAndroidVersion"
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    // (see https://github.com/ReactiveX/RxJava/releases for latest 3.x.x version)
+    implementation "io.reactivex:rxjava:$rxJavaVersion"
+    implementation "net.grandcentrix.thirtyinch:thirtyinch:$thirtyinchVersion"
+    implementation "net.grandcentrix.thirtyinch:thirtyinch-rx:$thirtyinchVersion"
+    testImplementation 'junit:junit:4.12'
 }
 
 

@@ -29,7 +29,7 @@
         android:theme="@style/App.Theme">
         <activity
             android:name="pl.hypeapp.endoscope.ui.activity.MainMenuActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/App.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -39,7 +39,7 @@
         </activity>
         <activity
             android:name="pl.hypeapp.endoscope.ui.activity.SplashScreenActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/App.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -50,7 +50,7 @@
         <activity
             android:name="pl.hypeapp.endoscope.ui.activity.ConnectToStreamActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/App.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -67,7 +67,7 @@
         </activity>
         <activity
             android:name="pl.hypeapp.endoscope.ui.activity.StartStreamActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/App.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -79,7 +79,7 @@
         </activity>
         <activity
             android:name="pl.hypeapp.endoscope.ui.activity.SettingsActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/App.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -89,7 +89,7 @@
         </activity>
         <activity
             android:name="pl.hypeapp.endoscope.ui.activity.HowToUseActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/App.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -100,7 +100,7 @@
         <activity
             android:name="pl.hypeapp.endoscope.ui.activity.PlayStreamActivity"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="landscape"
+            android:screenOrientation="fullSensor"
             android:theme="@style/App.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
